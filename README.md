@@ -72,7 +72,9 @@ The Task Factory exposes approved execution primitives:
 tasks = PlatformTaskFactory(dag)
 
 validate = tasks.aks_python("validate", snapshot, "validate.py")
+
 transform = tasks.aks_python("transform", snapshot, "transform.py")
+
 upload = tasks.sftp_upload("upload", "/data/out.csv", "/incoming/out.csv", "sftp")
 
 validate >> transform >> upload
