@@ -3,12 +3,9 @@
 This repository implements a multi-tenant, Kubernetes-native data execution platform on top of Apache Airflow.
 
 It is designed to run hundreds of customer pipelines using a single, stable DAG architecture where:
-
-Customers define what runs and in what order
-
-The platform controls how it runs (AKS, retries, memory, secrets, images, logging)
-
-This avoids DAG sprawl and enables safe, scalable data operations.
+1. Customers define what runs and in what order
+2. The platform controls how it runs (AKS, retries, memory, secrets, images, logging)
+3. This avoids DAG sprawl and enables safe, scalable data operations.
 
 ## Core Design Principles
 | Principle         | Description                                          |
