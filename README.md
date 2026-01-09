@@ -28,13 +28,23 @@ modules/
 User DAG
    │
    ▼
-Platform DAG Factory   →  defines retries, SLAs, tags, governance
+Platform DAG Factory
+   ├─ defines retries
+   ├─ defines SLAs
+   ├─ defines tags
+   └─ defines governance
    │
    ▼
-Platform Task Factory  →  defines how tasks run (AKS, Python, SFTP, etc)
+Platform Task Factory
+   ├─ AKS execution
+   ├─ Python operators
+   ├─ SFTP operators
+   └─ resource & retry policies
    │
    ▼
-AKS Runtime            →  executes user code snapshots
+AKS Runtime
+   └─ executes user code snapshots
+
 
 ## DAG Factory
 
